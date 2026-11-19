@@ -42,7 +42,22 @@ def cek_file(path: Path):
             baris_mulai = fungsi_node.start_point[0] + 1
             print(f"{path}:{baris_mulai}: fungsi '{nama_fungsi}' terlalu panjang ({jumlah_baris} baris)")
 
-    # Fitur 3 akan diimplementasikan pada Tahap 9
+    # ----------------------------------------------------
+    # Fitur 3: Deteksi file yang mengandung syntax error
+    # ----------------------------------------------------
+    if tree.root_node.has_error:
+        def cari_error(node):
+            if node.is_error or node.is_missing:
+                return node
+            for child in node.children:
+                err = cari_error(child)
+                if err:
+                    return err
+            return None
+
+        err_node = cari_error(tree.root_node)
+        baris_err = (err_node.start_point[0] + 1) if err_node else (tree.root_node.start_point[0] + 1)
+        print(f"{path}:{baris_err}: syntax error ditemukan")
 
 def main():
     if len(sys.argv) < 2:
