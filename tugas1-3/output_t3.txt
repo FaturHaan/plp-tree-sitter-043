@@ -1,0 +1,24 @@
+﻿========================================================
+HASIL EVALUASI TUGAS 3 - QUERY PERTAMA
+File Target Uji: contoh_query.py
+========================================================
+
+--- Query 1: Nama Fungsi dan Jumlah Parameter (q_fungsi.scm) ---
+--- Mode Pasangan (Nama Fungsi & Jumlah Parameter) ---
+Fungsi: 'halo           ' | Jumlah parameter: 0 | Baris: 6
+Fungsi: 'tambah         ' | Jumlah parameter: 2 | Baris: 9
+Fungsi: 'cetak_profil   ' | Jumlah parameter: 3 | Baris: 13
+
+--- Query 2: Pemanggilan print(...) (q_print.scm) ---
+@fn         baris 7  : print
+@fn         baris 10 : print
+@fn         baris 15 : print
+@args       baris 7  : ("Halo, dunia!")
+@args       baris 10 : ("Menghitung penjumlahan...")
+@args       baris 15 : (pesan)
+
+--- Query 3: Import dan from ... import ... (q_import.scm) ---
+@modul      baris 1  : os
+@modul      baris 2  : sys
+@modul      baris 3  : pathlib
+@modul      baris 4  : math
