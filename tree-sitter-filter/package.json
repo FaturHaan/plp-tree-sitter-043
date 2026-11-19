@@ -1,0 +1,33 @@
+{
+  "name": "tree-sitter-filter",
+  "version": "0.1.0",
+  "description": "Filter DSL grammar for tree-sitter",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "filter"
+  ],
+  "author": "Mahasiswa",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^8.2.1"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0",
+    "prebuildify": "^6.0.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
+  }
+}
